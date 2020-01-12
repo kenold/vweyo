@@ -1,0 +1,33 @@
+/*  fonts for offline use -
+    or you can use @import if you have internet access: @import url('https://rsms.me/inter/inter.css');
+    if you use @import, you don't need the @font-face below
+*/
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/Inter-Regular.woff2) format("woff2"), url(/assets/fonts/Inter-Regular.woff) format("woff")
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: italic;
+    font-weight: 400;
+    src: url(/assets/fonts/Inter-Italic.woff2) format("woff2"), url(/assets/fonts/Inter-Italic.woff) format("woff")
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    src: url(/assets/fonts/Inter-Medium.woff2) format("woff2"), url(/assets/fonts/Inter-Medium.woff) format("woff")
+}
+
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    src: url(/assets/fonts/Inter-Bold.woff2) format("woff2"), url(/assets/fonts/Inter-Bold.woff) format("woff")
+}
