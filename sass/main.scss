@@ -84,7 +84,14 @@ a.skip-link {
     }
 }
 
-
+section {
+    padding: 2rem 0;
+}
+// how-it-works section
+.how-it-works {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
 .step-list {
     display: flex;
 }
