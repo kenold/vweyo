@@ -60,7 +60,8 @@ p {
 
 button {
   background: transparent;
-  border: 0; }
+  border: 0;
+  cursor: pointer; }
 
 .button {
   font-size: .75rem;
@@ -142,11 +143,18 @@ section {
   display: flex;
   flex-direction: column;
   padding-top: 2rem; }
+  @media (min-width: 768px) {
+    .step-list {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: -0.5rem; } }
   .step-list__item {
     background-color: var(--color-brown-light);
     color: #000;
+    flex: 1 0 calc(33% - 0.5rem);
+    margin-left: 0.5rem;
     margin-bottom: 0.75rem;
-    padding: 1rem;
+    padding: 3rem 1rem;
     text-align: center; }
     .step-list__item img {
       max-width: 60px; }
@@ -155,8 +163,24 @@ section {
       font-weight: 700;
       margin: 1rem 0; }
 
+.subscribe .container {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .subscribe .container {
+      flex-direction: row; } }
+
 .subscribe__photo {
   margin-bottom: 1rem; }
+  @media (min-width: 768px) {
+    .subscribe__photo {
+      flex-basis: 50%;
+      order: 2; } }
+
+@media (min-width: 768px) {
+  .subscribe__content {
+    flex-basis: 50%;
+    order: 1; } }
 
 .subscribe h2 {
   background-image: linear-gradient(to bottom, transparent 98%, #000 2%);

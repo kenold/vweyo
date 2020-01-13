@@ -30,6 +30,7 @@ p {
 button {
     background: transparent;
     border: 0;
+    cursor: pointer;
 }
 .button {
     font-size: .75rem;
@@ -128,11 +129,18 @@ section {
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
+    @include md {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: -0.5rem;
+    }
     &__item {
         background-color: var(--color-brown-light);
         color: #000;
+        flex: 1 0 calc(33% - 0.5rem);
+        margin-left: 0.5rem;
         margin-bottom: 0.75rem;
-        padding: 1rem;
+        padding: 3rem 1rem;
         text-align: center;
         img {
             max-width: 60px;
@@ -147,8 +155,25 @@ section {
 
 // section: subscribe
 .subscribe {
+    .container {
+        display: flex;
+        flex-direction: column;
+        @include md {
+            flex-direction: row;
+        }
+    }
     &__photo {
         margin-bottom: 1rem;
+        @include md {
+            flex-basis: 50%;
+            order: 2;
+        }
+    }
+    &__content {
+        @include md {
+            flex-basis: 50%;
+            order: 1;
+        }
     }
     h2 {
         background-image: linear-gradient(to bottom, transparent 98%, #000 2%);
