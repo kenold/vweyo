@@ -72,11 +72,10 @@ a.skip-link {
 
 .main-header {
     margin: 1rem 0 1.75rem 0;
-    .container--header {
+    .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 16px;
         @include md {
             max-width: var(--site-width);
             margin: 0 auto;
@@ -91,12 +90,7 @@ a.skip-link {
         font-weight: 700;
     }
 }
-.utilities-btns {
-    display: flex;
-    li {
-        margin-left: .5rem ;
-    }
-}
+
 // main nav
 .main-nav {
     display: none;
@@ -108,9 +102,8 @@ a.skip-link {
         justify-content: space-around;
     }
     &__item {
-        margin-right: 0.5rem;
+        margin-right: 1.5rem;
         a {
-            padding: 0 10px;
             text-transform: uppercase;
             transition: all 300ms;
             &:hover {
@@ -120,7 +113,14 @@ a.skip-link {
         }
     }
 }
+.utilities-btns {
+    display: flex;
+    li {
+        margin-left: .5rem ;
+    }
+}
 
+// sections
 section {
     padding: 2rem 0;
     h2 {
