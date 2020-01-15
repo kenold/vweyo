@@ -33,45 +33,40 @@
     <main role="main" id="main">
         <section class="steps">
             <div class="container">
-                <div class="section-intro">
-                    <h2 class="section-heading">How it works</h2>
-                    <p class="section-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae est beatae, nobis accusantium et qui perferendis voluptas. Soluta rerum sit sequi quaerat tenetur beatae placeat eius, iste, quasi, atque quisquam.</p>
-                </div>
-                <ul class="steps-list">
-                    <li class="steps-list__item">
-                        <div class="steps-list__item-icon">
-                            <img src="assets/images/box.svg" alt="Box Icon">
-                        </div>
-                        <h4 class="steps-list__item-title">Pick a Box</h4>
-                        <div class="steps-list__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
-                    </li>
-                    <li class="steps-list__item">
-                        <div class="steps-list__item-icon">
-                            <img src="assets/images/pay.svg" alt="Pay Icon">
-                        </div>
-                        <h4 class="steps-list__item-title">Make Payment</h4>
-                        <div class="steps-list__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
-                    </li>
-                    <li class="steps-list__item">
-                        <div class="steps-list__item-icon">
-                            <img src="assets/images/food.svg" alt="Delivery Icon">
-                        </div>
-                        <h4 class="steps-list__item-title">Same Day Delivery</h4>
-                        <div class="steps-list__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="subscribe">
-            <div class="container">
-                <div class="subscribe__photo">
-                    <img src="assets/images/woman-eating.jpg" alt="Woman eating salad">
-                </div>
-                <div class="subscribe__content">
-                    <h2>How about we take care of your loved one groceries for the entire month?</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem, obcaecati dolore reiciendis aliquam quod ipsa asperiores exercitationem, facilis modi dolores provident temporibus ad necessitatibus omnis distinctio pariatur culpa ducimus.</p>
-                    <button class="btn btn--primary">Subscribe</button>
+                <div class="section-wrapper">
+                    <div class="section-intro">
+                        <h2 class="section-intro__heading">How it works</h2>
+                        <p class="section-intro__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae est beatae, nobis accusantium et qui perferendis voluptas. Soluta rerum sit sequi quaerat tenetur beatae placeat eius, iste, quasi, atque quisquam.</p>
+                    </div>
+                    <ul class="steps-list">
+                        <li class="steps-list__item">
+                            <div class="steps-list__item-body">
+                                <div class="steps-list__item-icon">
+                                    <img src="assets/images/box.svg" alt="Box Icon">
+                                </div>
+                                <h4 class="steps-list__item-title">Pick a Box</h4>
+                                <div class="steps-list__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                            </div>
+                        </li>
+                        <li class="steps-list__item">
+                            <div class="steps-list__item-body">
+                                <div class="steps-list__item-icon">
+                                    <img src="assets/images/pay.svg" alt="Pay Icon">
+                                </div>
+                                <h4 class="steps-list__item-title">Make Payment</h4>
+                                <div class="steps-list__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                            </div>
+                        </li>
+                        <li class="steps-list__item">
+                            <div class="steps-list__item-body">
+                                <div class="steps-list__item-icon">
+                                    <img src="assets/images/food.svg" alt="Delivery Icon">
+                                </div>
+                                <h4 class="steps-list__item-title">Same Day Delivery</h4>
+                                <div class="steps-list__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -84,14 +79,44 @@
                         <div class="boxes-list__item-photo boxes-list__item-photo--primary">
                         </div>
                         <div class="boxes-list__item-body">
-                            <h4 class="boxes-list__item-title">The "Kichoy" Box</h4>
-                            <p class="boxes-list__item-teaser">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                            <div class="boxes-list__item-price price">
-                                <span class="price__amount">$89.99</span>
-                                <span class="price__shipping">+$5 Shipping</span>
+                            <div class="boxes-list__item-body">
+                                <h4 class="boxes-list__item-title">The "Kichoy" Box</h4>
+                                <p class="boxes-list__item-teaser">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                <div class="boxes-list__item-price price">
+                                    <span class="price__amount">$89.99</span>
+                                    <span class="price__shipping">+$5 Shipping</span>
+                                </div>
                             </div>
                         </div>
                     </article>
+
+                    <article class="boxes-list__item">
+                        <div class="boxes-list__item-photo boxes-list__item-photo--primary">
+                        </div>
+                        <div class="boxes-list__item-body">
+                            <div class="boxes-list__item-body">
+                                <h4 class="boxes-list__item-title">The "Kichoy" Box</h4>
+                                <p class="boxes-list__item-teaser">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                <div class="boxes-list__item-price price">
+                                    <span class="price__amount">$89.99</span>
+                                    <span class="price__shipping">+$5 Shipping</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe">
+            <div class="container">
+                <div class="subscribe__photo">
+                    <img src="assets/images/woman-eating.jpg" alt="Woman eating salad">
+                </div>
+                <div class="subscribe__content">
+                    <h2>How about we take care of your loved one groceries for the entire month?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem, obcaecati dolore reiciendis aliquam quod ipsa asperiores exercitationem, facilis modi dolores provident temporibus ad necessitatibus omnis distinctio pariatur culpa ducimus.</p>
+                    <button class="btn btn--primary">Subscribe</button>
                 </div>
             </div>
         </section>
