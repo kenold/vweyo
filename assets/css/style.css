@@ -8,35 +8,7 @@
   --radius: 5px;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .085), 0 8px 24px rgba(0, 0, 0, .1);
   --shadow-md: 0 1px 8px rgba(0, 0, 0, .085), 0 1px 8px rgba(0, 0, 0, .1);
-  --site-width: 800px; }
-
-/*  fonts for offline use -
-    or you can use @import if you have internet access: @import url('https://rsms.me/inter/inter.css');
-    if you use @import, you don't need the @font-face below
-*/
-@font-face {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 400;
-  src: url(/assets/fonts/Inter-Regular.woff2) format("woff2"), url(/assets/fonts/Inter-Regular.woff) format("woff"); }
-
-@font-face {
-  font-family: Inter;
-  font-style: italic;
-  font-weight: 400;
-  src: url(/assets/fonts/Inter-Italic.woff2) format("woff2"), url(/assets/fonts/Inter-Italic.woff) format("woff"); }
-
-@font-face {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  src: url(/assets/fonts/Inter-Medium.woff2) format("woff2"), url(/assets/fonts/Inter-Medium.woff) format("woff"); }
-
-@font-face {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 700;
-  src: url(/assets/fonts/Inter-Bold.woff2) format("woff2"), url(/assets/fonts/Inter-Bold.woff) format("woff"); }
+  --site-width: 900px; }
 
 html {
   font-family: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -101,10 +73,6 @@ a.skip-link {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    @media (min-width: 768px) {
-      .main-header .container {
-        max-width: var(--site-width);
-        margin: 0 auto; } }
   .main-header h1 {
     color: var(--color-base);
     font-size: 40;
@@ -117,16 +85,15 @@ a.skip-link {
     .main-nav {
       display: block; } }
   .main-nav__list {
-    display: flex;
-    justify-content: space-around; }
-  .main-nav__item {
-    margin-right: 1.5rem; }
-    .main-nav__item a {
-      text-transform: uppercase;
-      transition: all 300ms; }
-      .main-nav__item a:hover {
-        background-color: var(--color-accent-light);
-        border-radius: var(--radius); }
+    display: flex; }
+  .main-nav__item a {
+    font-size: .75rem;
+    padding: .5rem .75rem;
+    text-transform: uppercase;
+    transition: all 300ms; }
+    .main-nav__item a:hover {
+      background-color: var(--color-accent-light);
+      border-radius: var(--radius); }
 
 .utilities-btns {
   display: flex; }
@@ -143,39 +110,73 @@ section {
     margin-bottom: 1rem;
     text-transform: uppercase; }
 
-.section-text {
+.section-wrapper {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: 2rem 4rem; }
+
+@media (min-width: 768px) {
+  .section-intro {
+    margin-left: 4rem; } }
+
+.section-intro__text {
   font-weight: normal; }
 
-.steps {
-  background-color: var(--color-secondary);
-  color: #fff; }
-  .steps-list {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem; }
-    @media (min-width: 768px) {
-      .steps-list {
-        flex-direction: row;
-        justify-content: space-between;
-        margin-left: -0.5rem; } }
-    .steps-list__item {
-      background-color: var(--color-brown-light);
-      color: #000;
-      flex: 1 0 calc(33% - 0.5rem);
-      margin-left: 0.5rem;
-      margin-bottom: 0.75rem;
-      padding: 3rem 1rem;
-      text-align: center; }
-      .steps-list__item img {
-        max-width: 60px; }
-      .steps-list__item-title {
-        font-size: 1.125rem;
-        font-weight: 700;
-        margin: 1rem 0; }
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem; }
+  @media (min-width: 768px) {
+    .steps-list {
+      flex-direction: row;
+      justify-content: space-between; } }
+  .steps-list__item {
+    background-color: var(--color-brown-light);
+    color: #000;
+    flex: 0 1 calc(33% - 0.5rem);
+    max-width: 33.333333%;
+    margin-bottom: 0.75rem;
+    text-align: center; }
+    .steps-list__item-icon img {
+      max-width: 60px; }
+    .steps-list__item-body {
+      flex: 1 1 auto;
+      padding: 3rem 2rem; }
+    .steps-list__item-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin: 1.5rem 0; }
+    .steps-list__item-text {
+      line-height: 22px; }
+
+.boxes-list {
+  display: flex;
+  justify-content: space-between; }
+  .boxes-list__item {
+    flex: 0 1 calc(50% - .5rem);
+    max-width: 50%; }
+    .boxes-list__item-body {
+      padding: 0.125rem .5rem; }
+    .boxes-list__item-photo {
+      margin-bottom: 1rem; }
+      .boxes-list__item-photo--primary {
+        background-color: var(--color-primary);
+        height: 350px;
+        width: 100%; }
+    .boxes-list__item h4 {
+      font-weight: 700; }
+    .boxes-list__item p {
+      margin: .5rem 0; }
+    .boxes-list__item .price__amount {
+      font-weight: 700; }
+    .boxes-list__item .price__shipping {
+      color: #444;
+      font-size: .75rem; }
 
 .subscribe .container {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-between; }
   @media (min-width: 768px) {
     .subscribe .container {
       flex-direction: row; } }
@@ -184,40 +185,21 @@ section {
   margin-bottom: 1rem; }
   @media (min-width: 768px) {
     .subscribe__photo {
-      flex-basis: 50%;
+      flex: 0 1 calc(50% - .5rem);
       order: 2; } }
 
 @media (min-width: 768px) {
   .subscribe__content {
-    flex-basis: 50%;
-    order: 1; } }
+    flex: 0 1 calc(50% - .5rem);
+    order: 1;
+    text-align: center; } }
 
 .subscribe h2 {
   background-image: linear-gradient(to bottom, transparent 98%, #000 2%);
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: center center;
   background-size: 50% 100%;
   padding-bottom: 0.5rem; }
-
-.boxes-list__item-photo {
-  margin-bottom: 1rem; }
-  .boxes-list__item-photo--primary {
-    background-color: var(--color-primary);
-    height: 350px;
-    width: 100%; }
-
-.boxes-list__item h4 {
-  font-weight: 700; }
-
-.boxes-list__item p {
-  margin: .5rem 0; }
-
-.boxes-list__item .price__amount {
-  font-weight: 700; }
-
-.boxes-list__item .price__shipping {
-  color: #444;
-  font-size: .75rem; }
 
 .main-footer {
   margin: 2rem 0; }

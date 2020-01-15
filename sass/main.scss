@@ -1,9 +1,6 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
-// import fonts partial from sass/_fonts.scss
-@import 'fonts.scss';
-
 html {
     font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
@@ -76,10 +73,6 @@ a.skip-link {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include md {
-            max-width: var(--site-width);
-            margin: 0 auto;
-        }
     }
     .brand {
 
@@ -99,11 +92,12 @@ a.skip-link {
     }
     &__list {
         display: flex;
-        justify-content: space-around;
     }
     &__item {
-        margin-right: 1.5rem;
+        //margin-right: 1.5rem;
         a {
+            font-size: .75rem;
+            padding: .5rem .75rem;
             text-transform: uppercase;
             transition: all 300ms;
             &:hover {
@@ -133,78 +127,68 @@ section {
     }
 }
 .section {
-    &-text {
-        font-weight: normal;
+        &-wrapper {
+            background-color: var(--color-secondary);
+            color: #fff;
+            padding: 2rem 4rem;
+        }
+        &-intro {
+        @include md {
+            margin-left: 4rem;
+        }
+        &__text {
+            font-weight: normal;
+        }
     }
 }
 // section: steps/how-it-works
 .steps {
-    background-color: var(--color-secondary);
-    color: #fff;
     &-list {
         display: flex;
         flex-direction: column;
-        padding-top: 2rem;
+        padding-top: 1rem;
         @include md {
             flex-direction: row;
             justify-content: space-between;
-            margin-left: -0.5rem;
         }
         &__item {
             background-color: var(--color-brown-light);
             color: #000;
-            flex: 1 0 calc(33% - 0.5rem);
-            margin-left: 0.5rem;
+            flex: 0 1 calc(33% - 0.5rem);
+            max-width: 33.333333%;
             margin-bottom: 0.75rem;
-            padding: 3rem 1rem;
             text-align: center;
-            img {
+            &-icon img {
                 max-width: 60px;
+            }
+            &-body {
+                flex: 1 1 auto;
+                padding: 3rem 2rem;
             }
             &-title {
                 font-size: 1.125rem;
                 font-weight: 700;
-                margin: 1rem 0;
+                margin: 1.5rem 0;
+            }
+            &-text {
+                line-height: 22px;
             }
         }
     }
 }
 
-// section: subscribe
-.subscribe {
-    .container {
-        display: flex;
-        flex-direction: column;
-        @include md {
-            flex-direction: row;
-        }
-    }
-    &__photo {
-        margin-bottom: 1rem;
-        @include md {
-            flex-basis: 50%;
-            order: 2;
-        }
-    }
-    &__content {
-        @include md {
-            flex-basis: 50%;
-            order: 1;
-        }
-    }
-    h2 {
-        background-image: linear-gradient(to bottom, transparent 98%, #000 2%);
-        background-repeat: no-repeat;
-        background-position: left center;
-        background-size: 50% 100%;
-        padding-bottom: 0.5rem;
-    }
-}
 
 // section: boxes
 .boxes {
     &-list {
+        display: flex;
+        justify-content: space-between;
         &__item {
+            flex: 0 1 calc(50% - .5rem);
+            max-width: 50%;
+            &-body {
+                padding: 0.125rem .5rem;
+            }
             &-photo {
                 margin-bottom: 1rem;
                 &--primary {
@@ -229,6 +213,40 @@ section {
         }
     }
 }
+
+// section: subscribe
+.subscribe {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include md {
+            flex-direction: row;
+        }
+    }
+    &__photo {
+        margin-bottom: 1rem;
+        @include md {
+            flex: 0 1 calc(50% - .5rem);
+            order: 2;
+        }
+    }
+    &__content {
+        @include md {
+            flex: 0 1 calc(50% - .5rem);
+            order: 1;
+            text-align: center;
+        }
+    }
+    h2 {
+        background-image: linear-gradient(to bottom, transparent 98%, #000 2%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 100%;
+        padding-bottom: 0.5rem;
+    }
+}
+
 // main footer
 .main-footer {
     margin: 2rem 0;
