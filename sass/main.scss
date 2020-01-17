@@ -158,6 +158,8 @@ section {
         @include md {
             flex-direction: row-reverse;
             align-items: center;
+            margin-right: 2rem;
+            padding-bottom: 3rem;
         }
     }
     &__photo {
@@ -182,6 +184,11 @@ section {
 
 // section: steps/how-it-works
 .steps {
+    @include md {
+        margin-top: -130px;
+        position: relative;
+        z-index: 2;
+    }
     &__content {
         background-color: var(--color-secondary);
         color: #fff;
