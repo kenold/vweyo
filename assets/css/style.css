@@ -107,9 +107,9 @@ a.skip-link {
     .main-nav__item a:hover {
       color: var(--color-primary); }
 
-.utilities-btns {
+.utilities__list {
   display: flex; }
-  .utilities-btns li {
+  .utilities__list li {
     margin-left: .5rem; }
 
 section {
