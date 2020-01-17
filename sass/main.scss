@@ -30,9 +30,10 @@ button {
     cursor: pointer;
 }
 .btn {
+    border-radius: var(--radius);
     font-size: .75rem;
     letter-spacing: .6px;
-    padding: .75rem;
+    padding: .75rem 1.5rem;
     text-transform: uppercase;
     &--primary {
         background-color: var(--color-primary);
@@ -75,7 +76,9 @@ a.skip-link {
         justify-content: space-between;
     }
     .brand {
-
+        img {
+            max-width: 150px;
+        }
     }
     h1 {
         color: var(--color-base);
@@ -94,15 +97,13 @@ a.skip-link {
         display: flex;
     }
     &__item {
-        //margin-right: 1.5rem;
         a {
-            font-size: .75rem;
+            font-size: .85rem;
             padding: .5rem .75rem;
             text-transform: uppercase;
             transition: all 300ms;
             &:hover {
-                background-color: var(--color-accent-light);
-                border-radius: var(--radius);
+                color: var(--color-primary);
             }
         }
     }
@@ -117,6 +118,11 @@ a.skip-link {
 // sections
 section {
     padding: 2rem 0;
+    header {
+        @include md {
+            margin-left: 4rem;
+        }
+    }
     h2 {
         font-family: var(--font-title);
         font-size: 1.75rem;
@@ -127,22 +133,63 @@ section {
     }
 }
 .section {
-        &-wrapper {
-            background-color: var(--color-secondary);
-            color: #fff;
-            padding: 2rem 4rem;
-        }
-        &-intro {
+    &-wrapper {
+        background-color: var(--color-secondary);
+        color: #fff;
+        padding: 2rem 4rem;
+    }
+    &__text {
+        font-weight: normal;
+    }
+}
+
+
+// hero
+.main-hero {
+    background-color: var(--color-brown-light);
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 0;
+    margin-top: -95px;
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex-direction: column;
         @include md {
-            margin-left: 4rem;
+            flex-direction: row-reverse;
+            align-items: center;
         }
-        &__text {
-            font-weight: normal;
+    }
+    &__photo {
+        img {
+            @include md {
+                max-width: 250px;
+            }
+        }
+    }
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 38px;
+    }
+    &__body {
+        margin: 1rem 0 2rem;
+        @include md {
+            max-width: 70%;
         }
     }
 }
+
 // section: steps/how-it-works
 .steps {
+    &__content {
+        background-color: var(--color-secondary);
+        color: #fff;
+        padding: 1rem;
+        @include md {
+            padding: 2rem 4rem;
+        }
+    }
     &-list {
         display: flex;
         flex-direction: column;
@@ -154,10 +201,12 @@ section {
         &__item {
             background-color: var(--color-brown-light);
             color: #000;
-            flex: 0 1 calc(33% - 0.5rem);
-            max-width: 33.333333%;
             margin-bottom: 0.75rem;
             text-align: center;
+            @include md {
+                flex: 0 1 calc(33% - 0.5rem);
+                max-width: 33.333333%;
+            }
             &-icon img {
                 max-width: 60px;
             }
@@ -190,12 +239,14 @@ section {
                 padding: 0.125rem .5rem;
             }
             &-photo {
+                border: 1px solid var(--color-primary);
                 margin-bottom: 1rem;
-                &--primary {
-                    background-color: var(--color-primary);
-                    height: 350px;
-                    width: 100%;
-                }
+                height: 350px;
+                // &--primary {
+                //     background-color: var(--color-primary);
+                //     height: 350px;
+                //     width: 100%;
+                // }
             }
             h4 {
                 font-weight: 700;
@@ -216,7 +267,7 @@ section {
 
 // section: subscribe
 .subscribe {
-    .container {
+    &__content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -231,7 +282,7 @@ section {
             order: 2;
         }
     }
-    &__content {
+    &__body {
         @include md {
             flex: 0 1 calc(50% - .5rem);
             order: 1;
