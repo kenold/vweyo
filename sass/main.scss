@@ -35,14 +35,26 @@ button {
     font-size: .75rem;
     letter-spacing: .6px;
     padding: .75rem 1.5rem;
+    outline: none;
     text-transform: uppercase;
+    &:focus {
+        border: 1px solid #000;
+    }
     &--primary {
         background-color: var(--color-primary);
         color: #fff;
+        transition: all 200ms;
+        &:hover {
+            background-color: #000;
+        }
     }
     &--secondary {
        background-color: var(--color-secondary);
        color: #fff;
+       transition: all 200ms;
+        &:hover {
+            background-color: #a7312e;
+        }
     }
 }
 
