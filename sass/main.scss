@@ -12,6 +12,7 @@ body {
 a {
     color: var(--color-base);
     text-decoration: none;
+    transition: all 200ms;
 }
 img {
     width: 100%;
@@ -242,6 +243,9 @@ section {
         &__item {
             flex: 0 1 calc(50% - .5rem);
             max-width: 50%;
+            a:hover &-title {
+                color: var(--color-secondary);
+            }
             &-body {
                 padding: 0.125rem .5rem;
             }
@@ -249,14 +253,10 @@ section {
                 border: 1px solid var(--color-primary);
                 margin-bottom: 1rem;
                 height: 350px;
-                // &--primary {
-                //     background-color: var(--color-primary);
-                //     height: 350px;
-                //     width: 100%;
-                // }
             }
             h4 {
                 font-weight: 700;
+                transition: all 200ms;
             }
             p {
                 margin: .5rem 0;
