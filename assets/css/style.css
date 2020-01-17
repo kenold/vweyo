@@ -125,33 +125,33 @@ section {
     margin-bottom: 1rem;
     text-transform: uppercase; }
 
-.main-hero {
+.hero {
   background-color: var(--color-brown-light);
   width: 100%;
   padding-top: 6rem;
   padding-bottom: 0;
   margin-top: -95px;
   overflow: hidden; }
-  .main-hero__content {
+  .hero__content {
     display: flex;
     flex-direction: column; }
     @media (min-width: 768px) {
-      .main-hero__content {
+      .hero__content {
         flex-direction: row-reverse;
         align-items: center;
         margin-right: 2rem;
         padding-bottom: 3rem; } }
   @media (min-width: 768px) {
-    .main-hero__photo img {
+    .hero__photo img {
       max-width: 250px; } }
-  .main-hero h1 {
+  .hero h1 {
     font-size: 2rem;
     font-weight: 700;
     line-height: 38px; }
-  .main-hero__body {
+  .hero__body {
     margin: 1rem 0 2rem; }
     @media (min-width: 768px) {
-      .main-hero__body {
+      .hero__body {
         max-width: 70%; } }
 
 @media (min-width: 768px) {
