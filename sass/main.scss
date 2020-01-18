@@ -74,7 +74,7 @@ a.skip-link {
     transition: top .1s linear;
 }
 
-.container {
+.wrapper {
     padding: 0 16px;
     @include md {
         max-width: var(--site-width);
@@ -84,7 +84,7 @@ a.skip-link {
 
 .main-header {
     margin: 1rem 0 1.75rem 0;
-    .container {
+    &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -187,7 +187,7 @@ section {
     padding-bottom: 0;
     margin-top: -95px;
     overflow: hidden;
-    &__content {
+    &__inner {
         display: flex;
         flex-direction: column;
         @include md {
@@ -224,7 +224,7 @@ section {
         position: relative;
         z-index: 2;
     }
-    &__content {
+    &__inner {
         background-color: var(--color-secondary);
         color: #fff;
         padding: 1rem;
@@ -232,7 +232,7 @@ section {
             padding: 2rem 4rem;
         }
     }
-    &-list {
+    &__list {
         display: flex;
         flex-direction: column;
         padding-top: 1rem;
@@ -240,78 +240,78 @@ section {
             flex-direction: row;
             justify-content: space-between;
         }
-        &__item {
-            background-color: var(--color-brown-light);
-            color: #000;
-            margin-bottom: 0.75rem;
-            text-align: center;
-            @include md {
-                flex: 0 1 calc(33% - 0.5rem);
-                max-width: 33.333333%;
-            }
-            &-icon img {
-                max-width: 60px;
-            }
-            &-body {
-                flex: 1 1 auto;
-                padding: 3rem 2rem;
-            }
-            &-title {
-                font-size: 1.125rem;
-                font-weight: 700;
-                margin: 1.5rem 0;
-            }
-            &-text {
-                line-height: 22px;
-            }
+    }
+    &__item {
+        background-color: var(--color-brown-light);
+        color: #000;
+        margin-bottom: 0.75rem;
+        text-align: center;
+        @include md {
+            flex: 0 1 calc(33% - 0.5rem);
+            max-width: 33.333333%;
         }
+    }
+    &__icon img {
+        max-width: 60px;
+    }
+    &__body {
+        flex: 1 1 auto;
+        padding: 3rem 2rem;
+    }
+    &__title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin: 1.5rem 0;
+    }
+    &__text {
+        line-height: 22px;
     }
 }
 
 
 // section: boxes
 .boxes {
-    &-list {
+    &__list {
         display: flex;
         justify-content: space-between;
-        &__item {
-            flex: 0 1 calc(50% - .5rem);
-            max-width: 50%;
-            a:hover &-title {
-                color: var(--color-secondary);
-            }
-            &-body {
-                padding: 0.125rem .5rem;
-            }
-            &-photo {
-                border: 1px solid var(--color-primary);
-                margin-bottom: 1rem;
-                height: 250px;
-                @include md {
-                    height: 350px;
-                }
-            }
-            h4 {
-                font-weight: 700;
-                transition: all 200ms;
-            }
-            p {
-                margin: .5rem 0;
-            }
-            .price__amount {
-                font-weight: 700;
-            }
-            .price__shipping {
-                color: #444;
-                font-size: .75rem;
-            }
+    }
+    &__item {
+        flex: 0 1 calc(50% - .5rem);
+        max-width: 50%;
+        a:hover h4 {
+            color: var(--color-secondary);
         }
+    }
+    &__photo {
+        border: 1px solid var(--color-primary);
+        margin-bottom: 1rem;
+        height: 250px;
+        @include md {
+            height: 350px;
+        }
+    }
+    &__body {
+        padding: 0.125rem .5rem;
+    }
+    &__title {
+        font-weight: 700;
+        transition: all 200ms;
+    }
+    &__teaser {
+        margin: .5rem 0;
+    }
+    .price__amount {
+        font-weight: 700;
+    }
+    .price__shipping {
+        color: #444;
+        font-size: .75rem;
     }
 }
 
 // section: subscribe
 .subscribe {
-    &__content {
+    &__inner {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
