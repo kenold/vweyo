@@ -285,10 +285,6 @@ section {
     &__photo {
         border: 1px solid var(--color-primary);
         margin-bottom: 1rem;
-        height: 250px;
-        @include md {
-            height: 350px;
-        }
     }
     &__body {
         padding: 0.125rem .5rem;

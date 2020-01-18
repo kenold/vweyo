@@ -241,11 +241,7 @@ section {
 
 .boxes__photo {
   border: 1px solid var(--color-primary);
-  margin-bottom: 1rem;
-  height: 250px; }
-  @media (min-width: 768px) {
-    .boxes__photo {
-      height: 350px; } }
+  margin-bottom: 1rem; }
 
 .boxes__body {
   padding: 0.125rem .5rem; }
