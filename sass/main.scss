@@ -46,7 +46,7 @@ button {
         color: #fff;
         transition: all 200ms;
         &:hover {
-            background-color: #000;
+            background-color: #4db6ac;
         }
     }
     &--secondary {
@@ -111,9 +111,14 @@ a.skip-link {
         display: flex;
     }
     &__item {
+        @include md {
+            margin-right: 2rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
         a {
             font-size: .85rem;
-            padding: 0.5rem .75rem;
             text-transform: uppercase;
             transition: all 300ms;
             &:hover {
