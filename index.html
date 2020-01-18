@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,11 +22,11 @@
                         <li class="main-nav__item "><a href="#">Help a Family</a></li>
                     </ul>
                 </nav>
-                <h1 class="brand">
+                <div class="brand">
                     <a href="/">
                         <img src="assets/images/vweyo-logo.png" alt="Vweyo Logo" title="Vweyo.com">
                     </a>
-                </h1>
+                </div>
                 <div class="utilities">
                     <ul class="utilities__list">
                         <li  class="utilities__item">
@@ -35,20 +35,20 @@
                         <li class="utilities__item">
                             <a role="button" class="btn btn--secondary" href="#">Login</a>
                         </li>
-                        <li class="utilities__item cart">
-                            <a href="#" title="Shopping Cart">
-                                <div class="cart__icon">
-                                    <img src="assets/images/shopping-cart.svg" alt="Shopping Cart">
-                                </div>
-                                <div class="cart__count">2</div>
-                            </a>
-                        </li>
                     </ul>
+                    <div class="cart">
+                        <a class="cart__link" href="#" title="Shopping Cart">
+                            <div class="cart__icon">
+                                <img src="assets/images/shopping-cart.svg" alt="Shopping Cart">
+                            </div>
+                            <div class="cart__count">2</div>
+                        </a>
+                    </div>
                 </div>
             </div> <!-- /.main-header__inner -->
         </div> <!-- /.wrapper -->
     </header>
-    <main role="main" id="main" tabindex="-1">
+    <main id="main" tabindex="-1">
         <section class="hero">
             <div class="wrapper">
                 <div class="hero__inner">
@@ -110,34 +110,28 @@
                         <h2 class="section-header__title">Just 2 Boxes</h2>
                     </header>
                     <div class="boxes__list">
-                        <article class="boxes__item">
+                        <article class="boxes__item boxes__item--primary">
                             <a href="#" class="boxes__link">
                                 <div class="boxes__photo">
                                     <img src="assets/images/placeholder.jpg" alt="Placeholder image">
                                 </div>
                                 <div class="boxes__details">
                                     <h4 class="boxes__title">The "Kichoy" Box</h4>
-                                    <p class="boxes__teaser">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                                    <div class="boxes__price price">
-                                        <span class="price__amount">$89.99</span>
-                                        <span class="price__shipping">+$5 Shipping</span>
-                                    </div>
+                                    <p class="boxes__teaser">Lorem ipsum dolor sit amet consectetur adipi sicing elit</p>
+                                    <div class="boxes__price">$89.99</div>
                                 </div>
                             </a>
                         </article>
 
-                        <article class="boxes__item">
+                        <article class="boxes__item boxes__item--secondary">
                             <a href="#" class="boxes__link">
                                 <div class="boxes__photo">
                                     <img src="assets/images/placeholder.jpg" alt="Placeholder image">
                                 </div>
                                 <div class="boxes__details">
-                                    <h4 class="boxes__title">The "Kichoy" Box</h4>
-                                    <p class="boxes__teaser">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                                    <div class="boxes__price price">
-                                        <span class="price__amount">$89.99</span>
-                                        <span class="price__shipping">+$5 Shipping</span>
-                                    </div>
+                                    <h4 class="boxes__title">The "Vant Deboutonnen" Box</h4>
+                                    <p class="boxes__teaser">Lorem ipsum dolor sit amet consectetur adi pisicing elit</p>
+                                    <div class="boxes__price">$79.99</div>
                                 </div>
                             </a>
                         </article>
@@ -153,10 +147,18 @@
                         <img src="assets/images/woman-eating.jpg" alt="Woman eating salad">
                     </div>
                     <div class="subscribe__body">
-                        <h2>How about we take care of your loved one groceries for the entire month?</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem, obcaecati dolore reiciendis aliquam quod ipsa asperiores exercitationem, facilis modi dolores provident temporibus ad necessitatibus omnis distinctio pariatur culpa ducimus.</p>
-                        <button class="btn btn--primary">Subscribe</button>
+                        <h2 class="subscribe__title">How about we take care of your loved one groceries for the entire month?</h2>
+                        <p class="subscribe__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem, obcaecati dolore reiciendis aliquam quod ipsa asperiores exercitationem, facilis modi dolores provident temporibus ad necessitatibus omnis distinctio pariatur culpa ducimus.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section section--yellow">
+            <div class="wrapper">
+                <div class="cta__inner">
+                    <p class="cta__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae ducimus aliquid impedit nostrum eos nam hic cum suscipit eum repudiandae placeat, dolores, libero cupiditate tempora corrupti quisquam mollitia similique numquam.</p>
+                    <a role="button" href="#" class="btn btn--primary">Subscribe</a>
                 </div>
             </div>
         </section>
@@ -165,12 +167,16 @@
     <footer class="main-footer">
         <div class="wrapper">
             <div class="main-footer__inner">
-                <div class="main-footer__logo-contact">logo</div>
-                <div class="main-footer__menu">links</div>
-                <div class="main-footer__company">company</div>
-                <div class="main-footer__social">social</div>
+                <div class="main-footer__top">
+                    <div class="main-footer__logo-contact">logo</div>
+                    <div class="main-footer__menu">links</div>
+                    <div class="main-footer__company">company</div>
+                    <div class="main-footer__social">social</div>
+                </div>
+                <div class="main-footer__bottom">
+                    &copy;2020 Vweyo. All rights reserved.
+                </div>
             </div>
-            &copy;2020 Vweyo. All rights reserved.
         </div>
     </footer>
 </body>
