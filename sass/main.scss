@@ -11,12 +11,13 @@ body {
 }
 a {
     color: var(--color-base);
+    display: block;
     text-decoration: none;
     transition: all 200ms;
 }
 a:focus,
 button:focus {
-    outline: 1px dotted #000;
+    outline: 3px dotted #000;
 }
 
 img {
@@ -75,6 +76,10 @@ a.skip-link {
     transition: top .1s linear;
 }
 
+#main:focus {
+    outline: 0;
+}
+
 .wrapper {
     padding: 0 16px;
     @include md {
@@ -121,6 +126,7 @@ a.skip-link {
         a {
             font-size: .85rem;
             text-transform: uppercase;
+            padding: .5rem 0;
             transition: all 300ms;
             &:hover {
                 color: var(--color-primary);
@@ -144,9 +150,12 @@ a.skip-link {
 }
 // cart
 .cart {
-    &__link {
+    a {
         display: block;
         position: relative;
+    }
+    &:hover &__count {
+        background-color: var(--color-secondary);
     }
     &__icon img {
         width: auto;
@@ -171,7 +180,6 @@ a.skip-link {
 
 // sections
 section {
-    padding: 2rem 0;
     header {
         @include md {
             margin-left: 4rem;
@@ -187,6 +195,7 @@ section {
     }
 }
 .section {
+    padding: 2rem 0;
     &--yellow {
         background-color: var(--color-yellow);
     }
@@ -363,6 +372,9 @@ section {
 
 // section: cta
 .cta {
+    &.section {
+        padding: 0.5rem 0
+    }
     &__inner {
         display: flex;
         flex-direction: column;

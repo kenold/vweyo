@@ -19,12 +19,13 @@ body {
 
 a {
   color: var(--color-base);
+  display: block;
   text-decoration: none;
   transition: all 200ms; }
 
 a:focus,
 button:focus {
-  outline: 1px dotted #000; }
+  outline: 3px dotted #000; }
 
 img {
   width: 100%; }
@@ -73,6 +74,9 @@ a.skip-link {
   text-align: center;
   transition: top .1s linear; }
 
+#main:focus {
+  outline: 0; }
+
 .wrapper {
   padding: 0 16px; }
   @media (min-width: 768px) {
@@ -109,6 +113,7 @@ a.skip-link {
   .main-nav__item a {
     font-size: .85rem;
     text-transform: uppercase;
+    padding: .5rem 0;
     transition: all 300ms; }
     .main-nav__item a:hover {
       color: var(--color-primary); }
@@ -125,9 +130,12 @@ a.skip-link {
   .utilities__item {
     margin-right: .75rem; }
 
-.cart__link {
+.cart a {
   display: block;
   position: relative; }
+
+.cart:hover .cart__count {
+  background-color: var(--color-secondary); }
 
 .cart__icon img {
   width: auto;
@@ -148,21 +156,22 @@ a.skip-link {
   top: -10px;
   right: -10px; }
 
-section {
-  padding: 2rem 0; }
-  @media (min-width: 768px) {
-    section header {
-      margin-left: 4rem; } }
-  section h2 {
-    font-family: var(--font-title), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 1.75rem;
-    letter-spacing: .8px;
-    line-height: 38px;
-    margin-bottom: 1rem;
-    text-transform: uppercase; }
+@media (min-width: 768px) {
+  section header {
+    margin-left: 4rem; } }
 
-.section--yellow {
-  background-color: var(--color-yellow); }
+section h2 {
+  font-family: var(--font-title), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: .8px;
+  line-height: 38px;
+  margin-bottom: 1rem;
+  text-transform: uppercase; }
+
+.section {
+  padding: 2rem 0; }
+  .section--yellow {
+    background-color: var(--color-yellow); }
 
 .hero {
   background-color: var(--color-brown-light);
@@ -306,6 +315,9 @@ section {
   background-position: center center;
   background-size: 50% 100%;
   padding-bottom: 0.5rem; }
+
+.cta.section {
+  padding: 0.5rem 0; }
 
 .cta__inner {
   display: flex;
