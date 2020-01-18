@@ -298,7 +298,7 @@ section {
         justify-content: space-between;
     }
     &__item {
-        flex: 0 1 calc(50% - .5rem);
+        flex: 0 1 calc(50% - .75rem);
         max-width: 50%;
         &--primary {
             border: 1px solid var(--color-primary);
