@@ -394,17 +394,44 @@ section {
 
 // main footer
 .main-footer {
-    margin: 2rem 0;
+    background-color: #f6f6f6;
+    padding: 2rem 0;
+    a {
+        padding: 0.25rem 0;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    li {
+        font-size: .875rem;
+        padding: 0 0 .5rem 0;
+    }
     &__top {
         display: flex;
         flex-direction: column;
-        margin-bottom: 2rem;
         > div {
             margin-bottom: 2rem;
         }
         @include md {
             flex-direction: row;
             justify-content: space-between;
+        }
+    }
+    &__logo-contact {
+        img {
+            max-width: 100px;
+        }
+        ul {
+            margin-top: 1rem;
+        }
+    }
+    &__social ul {
+        display: flex;
+        li {
+            margin-right: .75rem;
+        }
+        a:hover {
+            text-decoration: none;
         }
     }
 }

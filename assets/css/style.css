@@ -332,14 +332,31 @@ section h2 {
   flex: 0 1 calc(80% - 1rem); }
 
 .main-footer {
-  margin: 2rem 0; }
+  background-color: #f6f6f6;
+  padding: 2rem 0; }
+  .main-footer a {
+    padding: 0.25rem 0; }
+    .main-footer a:hover {
+      text-decoration: underline; }
+  .main-footer li {
+    font-size: .875rem;
+    padding: 0 0 .5rem 0; }
   .main-footer__top {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem; }
+    flex-direction: column; }
     .main-footer__top > div {
       margin-bottom: 2rem; }
     @media (min-width: 768px) {
       .main-footer__top {
         flex-direction: row;
         justify-content: space-between; } }
+  .main-footer__logo-contact img {
+    max-width: 100px; }
+  .main-footer__logo-contact ul {
+    margin-top: 1rem; }
+  .main-footer__social ul {
+    display: flex; }
+    .main-footer__social ul li {
+      margin-right: .75rem; }
+    .main-footer__social ul a:hover {
+      text-decoration: none; }
