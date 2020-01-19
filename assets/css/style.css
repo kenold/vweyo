@@ -354,9 +354,17 @@ section h2 {
     max-width: 100px; }
   .main-footer__logo-contact ul {
     margin-top: 1rem; }
+  .main-footer__logo-contact a {
+    padding: 0; }
   .main-footer__social ul {
     display: flex; }
     .main-footer__social ul li {
       margin-right: .75rem; }
-    .main-footer__social ul a:hover {
-      text-decoration: none; }
+      .main-footer__social ul li:last-child {
+        margin-right: 0; }
+      .main-footer__social ul li a {
+        color: var(--color-secondary);
+        padding: .75rem; }
+        .main-footer__social ul li a:hover {
+          color: var(--color-primary);
+          text-decoration: none; }
