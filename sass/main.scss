@@ -414,11 +414,8 @@ section {
             text-decoration: underline;
         }
     }
-    p, ul {
-        line-height: 22px;
-    }
     li {
-        padding: 0 0 .5rem 0;
+        padding: 0 0 .75rem 0;
     }
     .contact {
         &__logo img {
@@ -427,6 +424,7 @@ section {
         }
         &__body p {
             font-size: .875rem;
+            line-height: 24px;
             &:first-child {
                 margin-top: 0;
             }

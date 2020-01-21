@@ -340,15 +340,14 @@ section h2 {
     padding: 0.25rem 0; }
     .main-footer a:hover {
       text-decoration: underline; }
-  .main-footer p, .main-footer ul {
-    line-height: 22px; }
   .main-footer li {
-    padding: 0 0 .5rem 0; }
+    padding: 0 0 .75rem 0; }
   .main-footer .contact__logo img {
     margin-bottom: 0.75rem;
     max-width: 100px; }
   .main-footer .contact__body p {
-    font-size: .875rem; }
+    font-size: .875rem;
+    line-height: 24px; }
     .main-footer .contact__body p:first-child {
       margin-top: 0; }
   .main-footer__social-links {
