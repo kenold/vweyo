@@ -18,8 +18,12 @@
             <div class="main-header__inner">
                 <nav class="main-nav">
                     <ul class="main-nav__list">
-                        <li class="main-nav__item "><a href="#">Shop Boxes</a></li>
-                        <li class="main-nav__item "><a href="#">Help a Family</a></li>
+                        <li class="main-nav__item ">
+                            <a href="#" class="main-nav__link">Shop products</a>
+                        </li>
+                        <li class="main-nav__item ">
+                            <a href="#" class="main-nav__link">Help a Family</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="brand">
@@ -70,71 +74,81 @@
                         <h2 class="section-header__title">How it works</h2>
                         <p class="section-header__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae est beatae, nobis accusantium et qui perferendis voluptas. Soluta rerum sit sequi quaerat tenetur beatae placeat eius, iste, quasi, atque quisquam.</p>
                     </header>
-                    <ul class="steps__list">
-                        <li class="steps__item">
-                            <div class="steps__body">
-                                <div class="steps__icon">
+                    <div class="grid">
+                        <div class="grid__item">
+                            <div class="card card--icon card--center">
+                                <div class="card__photo">
                                     <img src="assets/images/box.svg" alt="Box Icon">
                                 </div>
-                                <h4 class="steps__title">Pick a Box</h4>
-                                <div class="steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                <div class="card__body">
+                                    <h4 class="card__title">Pick a Box</h4>
+                                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                </div>
                             </div>
-                        </li>
-                        <li class="steps__item">
-                            <div class="steps__body">
-                                <div class="steps__icon">
+                        </div>
+                        <div class="grid__item">
+                            <div class="card card--icon card--center">
+                                <div class="card__photo">
                                     <img src="assets/images/pay.svg" alt="Pay Icon">
                                 </div>
-                                <h4 class="steps__title">Make Payment</h4>
-                                <div class="steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                <div class="card__body">
+                                    <h4 class="card__title">Make Payment</h4>
+                                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                </div>
                             </div>
-                        </li>
-                        <li class="steps__item">
-                            <div class="steps__body">
-                                <div class="steps__icon">
+                        </div>
+                        <div class="grid__item">
+                            <div class="card card--icon card--center">
+                                <div class="card__photo">
                                     <img src="assets/images/food.svg" alt="Delivery Icon">
                                 </div>
-                                <h4 class="steps__title">Same Day Delivery</h4>
-                                <div class="steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                <div class="card__body">
+                                    <h4 class="card__title">Same Day Delivery</h4>
+                                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="boxes section">
+        <section class="products section">
             <div class="wrapper">
-                <div class="boxes__inner">
+                <div class="card__inner">
                     <header class="section-header">
-                        <h2 class="section-header__title">Just 2 Boxes</h2>
+                        <h2 class="section-header__title">Featured Products</h2>
                     </header>
-                    <div class="boxes__list">
-                        <article class="boxes__item boxes__item--primary">
-                            <a href="#" class="boxes__link">
-                                <div class="boxes__photo">
-                                    <img src="assets/images/placeholder.jpg" alt="Placeholder image">
-                                </div>
-                                <div class="boxes__details">
-                                    <h4 class="boxes__title">The "Kichoy" Box</h4>
-                                    <p class="boxes__teaser">Lorem ipsum dolor sit amet consectetur adipi sicing elit</p>
-                                    <div class="boxes__price">$89.99</div>
-                                </div>
-                            </a>
-                        </article>
+                    <div class="grid">
+                        <div class="grid__item">
+                            <div class="card card--primary">
+                                <a href="#" class="card__link">
+                                    <div class="card__photo">
+                                        <img src="assets/images/placeholder.jpg" alt="Placeholder image">
+                                    </div>
+                                    <div class="card__body">
+                                        <h4 class="card__title">The "Kichoy" Box</h4>
+                                        <p class="card__teaser">Lorem ipsum dolor sit amet consectetur adipi sicing elit</p>
+                                        <div class="card__price">$89.99</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
-                        <article class="boxes__item boxes__item--secondary">
-                            <a href="#" class="boxes__link">
-                                <div class="boxes__photo">
-                                    <img src="assets/images/placeholder.jpg" alt="Placeholder image">
-                                </div>
-                                <div class="boxes__details">
-                                    <h4 class="boxes__title">The "Vant Deboutonnen" Box</h4>
-                                    <p class="boxes__teaser">Lorem ipsum dolor sit amet consectetur adi pisicing elit</p>
-                                    <div class="boxes__price">$79.99</div>
-                                </div>
-                            </a>
-                        </article>
+                        <div class="grid__item">
+                            <div class="card card--secondary">
+                                <a href="#" class="card__link">
+                                    <div class="card__photo">
+                                        <img src="assets/images/placeholder.jpg" alt="Placeholder image">
+                                    </div>
+                                    <div class="card__body">
+                                        <h4 class="card__title">The "Vant Deboutonnen" Box</h4>
+                                        <p class="card__teaser">Lorem ipsum dolor sit amet consectetur adi pisicing elit</p>
+                                        <div class="card__price">$79.99</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,44 +182,48 @@
         <div class="wrapper">
             <div class="main-footer__inner">
                 <div class="main-footer__top">
-                    <div class="main-footer__logo-contact">
-                        <a href="/">
-                            <img src="assets/images/vweyo-logo.png" alt="Home">
-                        </a>
-                        <ul class="contact__list">
-                            <li>6593 Powers Ave Unit 8</li>
-                            <li>Jacksonville, FL 32217</li>
-                            <li aria-label="9 0 4. 0 0 0. 0 0 0 0"><a href="tel:904-000-0000">904-000-0000</a></li>
-                            <li><a href="mailto:help@vweyo.com">help@vweyo.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="main-footer__menu">
-                        <ul>
-                            <li><a href="#">Shop Boxes</a></li>
-                            <li><a href="#">Subscribe</a></li>
-                            <li><a href="#">Help a Family</a></li>
-                            <li><a href="#">Support</a></li>
-                        </ul>
-                    </div>
-                    <div class="main-footer__company">
-                        <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Our Stands</a></li>
-                            <li><a href="#">Press</a></li>
-                            <li><a href="#">Policies</a></li>
-                        </ul>
-                    </div>
-                    <div class="main-footer__social">
-                        <ul>
-                            <li><a href="#">FB</a></li>
-                            <li><a href="#">IG</a></li>
-                            <li><a href="#">TW</a></li>
-                            <li><a href="#">YT</a></li>
-                        </ul>
+                    <div class="grid">
+                        <div class="grid__item contact">
+                            <div class="contact__logo">
+                                <a href="/">
+                                    <img src="assets/images/vweyo-logo.png" alt="Home">
+                                </a>
+                            </div>
+                            <div class="contact__body">
+                                <p>6593 Powers Ave Unit 8 <br>
+                                Jacksonville, FL 32217 <br>
+                                <span aria-label="9 0 4. 0 0 0. 0 0 0 0"><a href="tel:904-000-0000">904-000-0000</a></span>
+                                <a href="mailto:help@vweyo.com">help@vweyo.com</a></p>
+                            </div>
+                        </div>
+                        <div class="grid__item grid__item--headless">
+                            <ul class="main-footer__menu">
+                                <li><a href="#">Shop products</a></li>
+                                <li><a href="#">Subscribe</a></li>
+                                <li><a href="#">Help a Family</a></li>
+                                <li><a href="#">Support</a></li>
+                            </ul>
+                        </div>
+                        <div class="grid__item grid__item--headless">
+                            <ul class="main-footer__menu">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Stands</a></li>
+                                <li><a href="#">Press</a></li>
+                                <li><a href="#">Policies</a></li>
+                            </ul>
+                        </div>
+                        <div class="grid__item grid__item--headless">
+                            <ul class="main-footer__social-links">
+                                <li><a href="#">FB</a></li>
+                                <li><a href="#">IG</a></li>
+                                <li><a href="#">TW</a></li>
+                                <li><a href="#">YT</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="main-footer__bottom">
-                    &copy;2020 Vweyo. All rights reserved.
+                    <p>&copy;2020 Vweyo. All rights reserved.</p>
                 </div>
             </div>
         </div>
