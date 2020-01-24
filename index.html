@@ -27,17 +27,17 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="brand">
-                    <a href="/">
-                        <img src="assets/images/vweyo-logo.png" alt="Vweyo Logo" title="Vweyo.com">
+                <div class="logo">
+                    <a href="/"  title="Back to the homepage">
+                        <img src="assets/images/vweyo-logo.png" alt="Vweyo">
                     </a>
                 </div>
-                <div class="utilities">
-                    <ul class="utilities__list">
-                        <li  class="utilities__item">
+                <div class="actions">
+                    <ul class="actions__list">
+                        <li  class="actions__item">
                             <a role="button" class="btn btn--primary" href="#">Signup</a>
                         </li >
-                        <li class="utilities__item">
+                        <li class="actions__item">
                             <a role="button" class="btn btn--secondary" href="#">Login</a>
                         </li>
                     </ul>
@@ -54,7 +54,7 @@
         </div> <!-- /.container -->
     </header>
     <main id="main" tabindex="-1">
-        <section class="hero section">
+        <section class="hero section bg--beige">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-5 order-md-2">
@@ -72,49 +72,43 @@
                 </div>
             </div>
         </section>
-        <section class="steps section">
+        <section class="features section">
             <div class="container">
-                <div class="steps__inner">
-                    <header class="section-header">
+                <div class="features__inner">
+                    <header class="section-header section-header--shifted">
                         <h2>How it works</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae est beatae, nobis accusantium et qui perferendis voluptas. Soluta rerum sit sequi quaerat tenetur beatae placeat eius, iste, quasi, atque quisquam.</p>
                     </header>
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <div class="card card--icon card--beige">
-                                <div class="card__photo">
-                                    <img src="assets/images/box.svg" alt="Box Icon">
-                                </div>
-                                <div class="card__body">
-                                    <h4 class="card__title">Pick a Box</h4>
-                                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                            <div class="feature feature--beige">
+                                <img src="assets/images/box.svg" class="feature__icon" alt="Box Icon">
+                                <div class="feature__body">
+                                    <h4 class="feature__title">Pick a Box</h4>
+                                    <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
-                            <div class="card card--icon card--beige">
-                                <div class="card__photo">
-                                    <img src="assets/images/pay.svg" alt="Pay Icon">
-                                </div>
-                                <div class="card__body">
-                                    <h4 class="card__title">Make Payment</h4>
-                                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                            <div class="feature feature--beige">
+                                <img src="assets/images/pay.svg" class="feature__icon" alt="Pay Icon">
+                                <div class="feature__body">
+                                    <h4 class="feature__title">Make Payment</h4>
+                                    <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
-                            <div class="card card--icon card--beige">
-                                <div class="card__photo">
-                                    <img src="assets/images/food.svg" alt="Delivery Icon">
-                                </div>
-                                <div class="card__body">
-                                    <h4 class="card__title">Same Day Delivery</h4>
-                                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                            <div class="feature feature--beige">
+                                <img src="assets/images/food.svg" class="feature__icon" alt="Delivery Icon">
+                                <div class="feature__body">
+                                    <h4 class="feature__title">Same Day Delivery</h4>
+                                    <p class="cardfeaturext">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div> <!-- /.row -->
+                </div> <!-- /.features__inner -->
             </div>
         </section>
 
@@ -127,9 +121,7 @@
                     <div class="col-12 col-md-6">
                         <div class="card card--primary">
                             <a href="#" class="card__link">
-                                <div class="card__photo">
-                                    <img src="assets/images/placeholder.jpg" alt="Placeholder image">
-                                </div>
+                                <img src="assets/images/placeholder.jpg" class="card__image" alt="Placeholder image">
                                 <div class="card__body">
                                     <h4 class="card__title">The "Kichoy" Box</h4>
                                     <p class="card__teaser">Lorem ipsum dolor sit amet consectetur adipi sicing elit</p>
@@ -142,9 +134,7 @@
                     <div class="col-12 col-md-6">
                         <div class="card card--secondary">
                             <a href="#" class="card__link">
-                                <div class="card__photo">
-                                    <img src="assets/images/placeholder.jpg" alt="Placeholder image">
-                                </div>
+                                <img src="assets/images/placeholder.jpg" class="card__image" alt="Placeholder image">
                                 <div class="card__body">
                                     <h4 class="card__title">The "Vant Deboutonnen" Box</h4>
                                     <p class="card__teaser">Lorem ipsum dolor sit amet consectetur adi pisicing elit</p>
@@ -178,7 +168,7 @@
         <section class="cta section section--yellow">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-7">
                         <p class="cta__description">Lorem ipsum dolor sit amet consectetur adipisicing elit quae</p>
                     </div>
                     <div class="col-12 col-md-2">
