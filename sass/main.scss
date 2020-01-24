@@ -10,7 +10,7 @@ body {
     font-weight: 400;
 }
 a {
-    color: var(--color-base);
+    color: #000;
     text-decoration: none;
     transition: all 200ms;
 }
@@ -60,6 +60,13 @@ button {
     }
 }
 
+.bg {
+    &--beige {
+        background-color: var(--color-beige);
+        color: #000;
+    }
+}
+
 // hide skip to content link
 a.skip-link {
     position: fixed;
@@ -99,13 +106,13 @@ a.skip-link {
         align-items: center;
         justify-content: space-between;
     }
-    .brand {
+    .logo {
         img {
             max-width: 150px;
         }
     }
     h1 {
-        color: var(--color-base);
+        color: #000;
         @include font-size(40);
         font-weight: 700;
     }
@@ -122,15 +129,15 @@ a.skip-link {
     }
     &__item {
         @include md {
+            font-size: .85rem;
+            text-transform: uppercase;
+            padding: .5rem 0;
             margin-right: 2rem;
             &:last-child {
                 margin-right: 0;
             }
         }
         a {
-            font-size: .85rem;
-            text-transform: uppercase;
-            padding: .5rem 0;
             transition: all 300ms;
             &:hover {
                 color: var(--color-primary);
@@ -138,7 +145,7 @@ a.skip-link {
         }
     }
 }
-.utilities {
+.actions {
     display: flex;
     justify-content: space-between;
     &__list {
@@ -184,11 +191,7 @@ a.skip-link {
 
 // sections
 section {
-    header {
-        @include md {
-            margin-left: 4rem;
-        }
-    }
+    padding: 1rem 0;
     h2 {
         font-family: $font-title,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 1.75rem;
@@ -199,7 +202,11 @@ section {
     }
 }
 .section {
-    padding: 1rem 0;
+    &-header--shifted {
+        @include md {
+            margin-left: 4rem;
+        }
+    }
     &--yellow {
         background-color: var(--color-yellow);
     }
@@ -207,6 +214,9 @@ section {
 
 // card
 .card {
+    &__link {
+        display: block;
+    }
     &__body {
         flex: 1 1 auto;
         padding: 1.5rem;
@@ -245,9 +255,37 @@ section {
     }
 }
 
+// features/how it works
+.feature {
+    padding: 3rem 0 1rem;
+    text-align: center;
+    img {
+        max-width: 60px;
+    }
+    &__link {
+        display: block;
+    }
+    &__body {
+        flex: 1 1 auto;
+        padding: 1.5rem;
+    }
+    &__title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        transition: all 200ms;
+    }
+    p {
+        margin-top: 0;
+    }
+    &--beige {
+        background-color: var(--color-beige);
+        color: #000;
+    }
+}
+
 // hero
 .hero {
-    background-color: var(--color-beige);
     width: 100%;
     padding-top: 6rem;
     padding-bottom: 0;
@@ -273,8 +311,8 @@ section {
     }
 }
 
-// section: how-it-works/steps
-.steps {
+// section: how-it-works/features
+.features {
     @include md {
         margin-top: -100px;
         position: relative;
@@ -287,20 +325,6 @@ section {
         @include md {
             padding: 2rem 3rem;
         }
-    }
-}
-
-// section: boxes
-.boxes {
-    &__teaser {
-        display: none;
-        margin-bottom: 0.75rem;
-        @include md {
-            display: block;
-        }
-    }
-    &__price {
-        font-weight: 700;
     }
 }
 
@@ -322,9 +346,7 @@ section {
 
 // section: cta
 .cta {
-    &.section {
-        padding: 1rem 0
-    }
+    padding: 1rem 0;
     .row {
         align-items: center;
         justify-content: center;
@@ -358,9 +380,11 @@ section {
         padding: 0 0 .75rem 0;
     }
     .contact {
-        &__logo img {
+        &__logo {
             margin-bottom: 0.75rem;
-            max-width: 100px;
+            img {
+                max-width: 100px;
+            }
         }
         &__body p {
             font-size: .875rem;
@@ -370,8 +394,9 @@ section {
             }
         }
     }
-    &__menu, &__social-links {
-        padding-top: 40px;
+    &__menu,
+    &__social-links {
+        padding-top: 45px;
     }
     &__social-links {
         display: flex;
