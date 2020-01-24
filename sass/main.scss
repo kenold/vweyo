@@ -294,7 +294,9 @@ section {
         align-items: center;
     }
     &__photo {
+        text-align: center;
         img {
+            max-width: 200px;
             @include md {
                 max-width: 250px;
             }
@@ -306,7 +308,10 @@ section {
         line-height: 1.2;
     }
     &__body {
-        margin: 1rem 0 2rem;
+        padding-bottom: 2rem;
+        @include md {
+            margin: 1rem 0 2rem;
+        }
     }
 }
 
@@ -411,10 +416,7 @@ section {
     }
     &__social-links {
         display: flex;
-        flex-direction: column;
-        @include md {
-            flex-direction: row;
-        }
+        flex-direction: row;
         li {
             margin-right: .75rem;
             &:last-child {

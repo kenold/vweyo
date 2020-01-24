@@ -237,15 +237,22 @@ section {
   overflow: hidden; }
   .hero .row {
     align-items: center; }
-  @media (min-width: 768px) {
+  .hero__photo {
+    text-align: center; }
     .hero__photo img {
-      max-width: 250px; } }
+      max-width: 200px; }
+      @media (min-width: 768px) {
+        .hero__photo img {
+          max-width: 250px; } }
   .hero h1 {
     font-size: 2.125rem;
     font-weight: 700;
     line-height: 1.2; }
   .hero__body {
-    margin: 1rem 0 2rem; }
+    padding-bottom: 2rem; }
+    @media (min-width: 768px) {
+      .hero__body {
+        margin: 1rem 0 2rem; } }
 
 @media (min-width: 768px) {
   .features {
@@ -323,10 +330,7 @@ section {
       padding-top: 45px; } }
   .main-footer__social-links {
     display: flex;
-    flex-direction: column; }
-    @media (min-width: 768px) {
-      .main-footer__social-links {
-        flex-direction: row; } }
+    flex-direction: row; }
     .main-footer__social-links li {
       margin-right: .75rem; }
       .main-footer__social-links li:last-child {
