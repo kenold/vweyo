@@ -123,6 +123,28 @@ a.skip-link {
     }
 }
 
+// nav-icon / hambuerger icon
+.nav-icon {
+    //margin: 1em;
+    width: 40px;
+    cursor: pointer;
+    @include md {
+        display: none;
+    }
+}
+
+.nav-icon:after,
+.nav-icon:before,
+.nav-icon div {
+  background-color: #000;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 4px;
+  margin: 7px 0;
+  transition: all .2s ease-in-out;
+}
+
 // main nav
 .main-nav {
     display: none;
